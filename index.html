@@ -1,98 +1,710 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+    <meta charset="utf-8"/>
+    <title>Prism - the Beyond Emotion</title>
+    <meta name="author" content="starpret"/>
+    <meta name="keywords" content="prism, stapret"/>
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Prism by starpret</title>
+    <meta property="og:description" content="디스크립션 "/>
+    <meta property="og:image" content="아이콘 경로"/>
+    <meta property="og:site_name" content="Prism - the Beyond Emotion"/>
+    <meta property="og:title" content="Prism - the Beyond Emotion"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://starpret.com"/>
+
+    <style type="text/css">
+        @import url(http://fonts.googleapis.com/css?family=Gabriela|Dosis:200);
+
+body {
+  font-family: "Vidaloka", serif;
+  font-smoothing: antialiased;
+  font-weight: normal;
+  background: #151618;
+  color: #FFF;
+  margin: 0;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+p {
+  line-height: 1.6em;
+  text-align: center;
+  font-size: 14px;
+}
+
+p + p {
+  margin-top: 1.0em;
+}
+
+a {
+  transition: color 0.2s ease-out;
+  text-decoration: none;
+  color: #FBB;
+}
+
+a:hover {
+  color: #444;
+}
+
+.overlay {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.logo {
+  margin-bottom: 10px;
+  height: 120px;
+  width: 120px;
+}
+
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  transition: opacity 0.4s ease-out;
+  margin: -280px -180px;
+  text-align: center;
+  position: absolute;
+  height: 560px;
+  width: 360px;
+  left: 50%;
+  top: 50%;
+}
+
+.header {
+  margin-bottom: 80px;
+}
+
+.information {
+  margin-bottom: 60px;
+}
+
+.footer {
+  font-family: Baskerville, sans-serif;
+  font-size: 30px;
+}
+
+.footer a {
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.footer .handle {
+  font-style: italic;
+}
+
+.controls {
+  font-smoothing: subpixel-antialiased;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+
+.links {
+  position: absolute;
+  list-style: none;
+  width: 120px;
+  bottom: 40px;
+  right: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  border-bottom: #222 1px solid;
+  border-bottom: rgba(255,255,255,0.1) 1px solid;
+}
+
+.links li a {
+  transition: opacity 0.2s ease-out;
+  font-smoothing: subpixel-antialiased;
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  padding: 0.25em 0;
+  letter-spacing: 2px;
+  font-weight: 200;
+  font-size: 12px;
+  display: block;
+  width: 100%;
+  opacity: 0.4;
+  color: #FFF;
+}
+
+.links li a:hover {
+  opacity: 0.8;
+}
+
+.links li .download:before {
+  opacity: 0.5;
+  content: '↓';
+  float: left;
+}
+
+.links li .source:before {
+  opacity: 0.5;
+  content: '{}';
+  float: left;
+}
+
+.links li .design:before {
+  opacity: 0.5;
+  content: '△';
+  float: left;
+}
+
+.vignette {
+  background-image: -webkit-radial-gradient(50% 50%, ellipse, rgba(0,0,0,0) 40%, rgba(0,0,0,1) 100%);
+  background-image: radial-gradient(50% 50%, ellipse, rgba(0,0,0,0) 40%, rgba(0,0,0,1) 100%);
+}
+
+
+.hide {
+  opacity: 0;
+}
+
+img {
+    background: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);   /* IE6 & 7 */
+    zoom: 1;
+}
+    </style>
+
+
   </head>
-
   <body>
-    <a id="forkme_banner" href="https://github.com/starpret/prism">View on GitHub</a>
-    <div class="shell">
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Prism</h1>
-            <h2>prism for all</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
-
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/starpret/prism/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/starpret/prism/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/starpret">starpret</a> can be found on <a href="https://github.com/starpret/prism">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
+    <div id="container" class="container">
+      <div id="output" class="container">
+      </div>
+      <div id="vignette" class="overlay vignette">
+      </div>
+      <div id="noise" class="overlay noise">
+      </div>
+        <div id="ui" class="wrapper">
+        <header id="header" class="header">
+          <img src="./icon_v2_vector.png">
+          <h1>Prism</h1>
+          the Beyond Emotion
+        </header>
+            <img src="./Download_on_the_App_Store_Badge_US-UK_135x40.svg">
+        <article id="information" class="information">
+        </article>
+        <footer id="footer" class="footer">
+        </footer>
+      </div>
+    </div>
+    <div id="controls" class="controls" style="display:none;">
     </div>
 
-    
+    <script src="http://wagerfield.github.io/flat-surface-shader/assets/scripts/libraries/prefixfree.min.js"></script>
+    <script src="http://wagerfield.github.io/flat-surface-shader/assets/scripts/libraries/dat.gui.min.js"></script>
+    <script src="http://wagerfield.github.io/flat-surface-shader/deploy/fss.min.js"></script>
+    <script>
+        (function(){
+
+  //------------------------------
+  // Mesh Properties
+  //------------------------------
+  var MESH = {
+    width: 1.2,
+    height: 1.2,
+    depth: 20,
+    segments: 11,
+    slices: 7,
+    xRange: 0.1,
+    yRange: 0.1,
+    zRange: 1.0,
+    ambient: '#555555',
+    diffuse: '#FFFFFF',
+    speed: 0.01
+  };
+
+  //------------------------------
+  // Light Properties
+  //------------------------------
+  var LIGHT = {
+    count: 2,
+    xyScalar: 2,
+    zOffset: 100,
+    ambient: '#880066',
+    diffuse: '#FF8800',
+    speed: 0.001,
+    gravity: 300,
+    dampening: 0.95,
+    minLimit: 10,
+    maxLimit: null,
+    minDistance: 20,
+    maxDistance: 400,
+    autopilot: false,
+    draw: false,
+    bounds: FSS.Vector3.create(),
+    step: FSS.Vector3.create(
+      Math.randomInRange(0.2, 1.0),
+      Math.randomInRange(0.2, 1.0),
+      Math.randomInRange(0.2, 1.0)
+    )
+  };
+
+  //------------------------------
+  // Render Properties
+  //------------------------------
+  var WEBGL = 'webgl';
+  var CANVAS = 'canvas';
+  var SVG = 'svg';
+  var RENDER = {
+    renderer: CANVAS
+  };
+
+  //------------------------------
+  // Export Properties
+  //------------------------------
+  var EXPORT = {
+    width: 2000,
+    height: 1000,
+    drawLights: false,
+    minLightX: 0.4,
+    maxLightX: 0.6,
+    minLightY: 0.2,
+    maxLightY: 0.4,
+    export: function() {
+      var l, x, y, light,
+          depth = MESH.depth,
+          zOffset = LIGHT.zOffset,
+          autopilot = LIGHT.autopilot,
+          scalar = this.width / renderer.width;
+
+      LIGHT.autopilot = true;
+      LIGHT.draw = this.drawLights;
+      LIGHT.zOffset *= scalar;
+      MESH.depth *= scalar;
+
+      resize(this.width, this.height);
+
+      for (l = scene.lights.length - 1; l >= 0; l--) {
+        light = scene.lights[l];
+        x = Math.randomInRange(this.width*this.minLightX, this.width*this.maxLightX);
+        y = Math.randomInRange(this.height*this.minLightY, this.height*this.maxLightY);
+        FSS.Vector3.set(light.position, x, this.height-y, this.lightZ);
+        FSS.Vector3.subtract(light.position, center);
+      }
+
+      update();
+      render();
+
+      switch(RENDER.renderer) {
+        case WEBGL:
+          window.open(webglRenderer.element.toDataURL(), '_blank');
+          break;
+        case CANVAS:
+          window.open(canvasRenderer.element.toDataURL(), '_blank');
+          break;
+        case SVG:
+          var data = encodeURIComponent(output.innerHTML);
+          var url = "data:image/svg+xml," + data;
+          window.open(url, '_blank');
+          break;
+      }
+
+      LIGHT.draw = true;
+      LIGHT.autopilot = autopilot;
+      LIGHT.zOffset = zOffset;
+      MESH.depth = depth;
+
+      resize(container.offsetWidth, container.offsetHeight);
+    }
+  };
+
+  //------------------------------
+  // UI Properties
+  //------------------------------
+  var UI = {
+    show: false
+  };
+
+  //------------------------------
+  // Global Properties
+  //------------------------------
+  var now, start = Date.now();
+  var center = FSS.Vector3.create();
+  var attractor = FSS.Vector3.create();
+  var container = document.getElementById('container');
+  var controls = document.getElementById('controls');
+  var output = document.getElementById('output');
+  var ui = document.getElementById('ui');
+  var renderer, scene, mesh, geometry, material;
+  var webglRenderer, canvasRenderer, svgRenderer;
+  var gui, autopilotController;
+
+  //------------------------------
+  // Methods
+  //------------------------------
+  function initialise() {
+    createRenderer();
+    createScene();
+    createMesh();
+    createLights();
+    addEventListeners();
+    addControls();
+    resize(container.offsetWidth, container.offsetHeight);
+    animate();
+  }
+
+  function createRenderer() {
+    webglRenderer = new FSS.WebGLRenderer();
+    canvasRenderer = new FSS.CanvasRenderer();
+    svgRenderer = new FSS.SVGRenderer();
+    setRenderer(RENDER.renderer);
+  }
+
+  function setRenderer(index) {
+    if (renderer) {
+      output.removeChild(renderer.element);
+    }
+    switch(index) {
+      case WEBGL:
+        renderer = webglRenderer;
+        break;
+      case CANVAS:
+        renderer = canvasRenderer;
+        break;
+      case SVG:
+        renderer = svgRenderer;
+        break;
+    }
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
+    output.appendChild(renderer.element);
+  }
+
+  function createScene() {
+    scene = new FSS.Scene();
+  }
+
+  function createMesh() {
+    scene.remove(mesh);
+    renderer.clear();
+    geometry = new FSS.Plane(MESH.width * renderer.width, MESH.height * renderer.height, MESH.segments, MESH.slices);
+    material = new FSS.Material(MESH.ambient, MESH.diffuse);
+    mesh = new FSS.Mesh(geometry, material);
+    scene.add(mesh);
+
+    // Augment vertices for animation
+    var v, vertex;
+    for (v = geometry.vertices.length - 1; v >= 0; v--) {
+      vertex = geometry.vertices[v];
+      vertex.anchor = FSS.Vector3.clone(vertex.position);
+      vertex.step = FSS.Vector3.create(
+        Math.randomInRange(0.2, 1.0),
+        Math.randomInRange(0.2, 1.0),
+        Math.randomInRange(0.2, 1.0)
+      );
+      vertex.time = Math.randomInRange(0, Math.PIM2);
+    }
+  }
+
+  function createLights() {
+    var l, light;
+    for (l = scene.lights.length - 1; l >= 0; l--) {
+      light = scene.lights[l];
+      scene.remove(light);
+    }
+    renderer.clear();
+    for (l = 0; l < LIGHT.count; l++) {
+      light = new FSS.Light(LIGHT.ambient, LIGHT.diffuse);
+      light.ambientHex = light.ambient.format();
+      light.diffuseHex = light.diffuse.format();
+      scene.add(light);
+
+      // Augment light for animation
+      light.mass = Math.randomInRange(0.5, 1);
+      light.velocity = FSS.Vector3.create();
+      light.acceleration = FSS.Vector3.create();
+      light.force = FSS.Vector3.create();
+
+      // Ring SVG Circle
+      light.ring = document.createElementNS(FSS.SVGNS, 'circle');
+      light.ring.setAttributeNS(null, 'stroke', light.ambientHex);
+      light.ring.setAttributeNS(null, 'stroke-width', '0.5');
+      light.ring.setAttributeNS(null, 'fill', 'none');
+      light.ring.setAttributeNS(null, 'r', '10');
+
+      // Core SVG Circle
+      light.core = document.createElementNS(FSS.SVGNS, 'circle');
+      light.core.setAttributeNS(null, 'fill', light.diffuseHex);
+      light.core.setAttributeNS(null, 'r', '4');
+    }
+  }
+
+  function resize(width, height) {
+    renderer.setSize(width, height);
+    FSS.Vector3.set(center, renderer.halfWidth, renderer.halfHeight);
+    createMesh();
+  }
+
+  function animate() {
+    now = Date.now() - start;
+    update();
+    render();
+    requestAnimationFrame(animate);
+  }
+
+  function update() {
+    var ox, oy, oz, l, light, v, vertex, offset = MESH.depth/2;
+
+    // Update Bounds
+    FSS.Vector3.copy(LIGHT.bounds, center);
+    FSS.Vector3.multiplyScalar(LIGHT.bounds, LIGHT.xyScalar);
+
+    // Update Attractor
+    FSS.Vector3.setZ(attractor, LIGHT.zOffset);
+
+    // Overwrite the Attractor position
+    if (LIGHT.autopilot) {
+      ox = Math.sin(LIGHT.step[0] * now * LIGHT.speed);
+      oy = Math.cos(LIGHT.step[1] * now * LIGHT.speed);
+      FSS.Vector3.set(attractor,
+        LIGHT.bounds[0]*ox,
+        LIGHT.bounds[1]*oy,
+        LIGHT.zOffset);
+    }
+
+    // Animate Lights
+    for (l = scene.lights.length - 1; l >= 0; l--) {
+      light = scene.lights[l];
+
+      // Reset the z position of the light
+      FSS.Vector3.setZ(light.position, LIGHT.zOffset);
+
+      // Calculate the force Luke!
+      var D = Math.clamp(FSS.Vector3.distanceSquared(light.position, attractor), LIGHT.minDistance, LIGHT.maxDistance);
+      var F = LIGHT.gravity * light.mass / D;
+      FSS.Vector3.subtractVectors(light.force, attractor, light.position);
+      FSS.Vector3.normalise(light.force);
+      FSS.Vector3.multiplyScalar(light.force, F);
+
+      // Update the light position
+      FSS.Vector3.set(light.acceleration);
+      FSS.Vector3.add(light.acceleration, light.force);
+      FSS.Vector3.add(light.velocity, light.acceleration);
+      FSS.Vector3.multiplyScalar(light.velocity, LIGHT.dampening);
+      FSS.Vector3.limit(light.velocity, LIGHT.minLimit, LIGHT.maxLimit);
+      FSS.Vector3.add(light.position, light.velocity);
+    }
+
+    // Animate Vertices
+    for (v = geometry.vertices.length - 1; v >= 0; v--) {
+      vertex = geometry.vertices[v];
+      ox = Math.sin(vertex.time + vertex.step[0] * now * MESH.speed);
+      oy = Math.cos(vertex.time + vertex.step[1] * now * MESH.speed);
+      oz = Math.sin(vertex.time + vertex.step[2] * now * MESH.speed);
+      FSS.Vector3.set(vertex.position,
+        MESH.xRange*geometry.segmentWidth*ox,
+        MESH.yRange*geometry.sliceHeight*oy,
+        MESH.zRange*offset*oz - offset);
+      FSS.Vector3.add(vertex.position, vertex.anchor);
+    }
+
+    // Set the Geometry to dirty
+    geometry.dirty = true;
+  }
+
+  function render() {
+    renderer.render(scene);
+
+    // Draw Lights
+    if (LIGHT.draw) {
+      var l, lx, ly, light;
+      for (l = scene.lights.length - 1; l >= 0; l--) {
+        light = scene.lights[l];
+        lx = light.position[0];
+        ly = light.position[1];
+        switch(RENDER.renderer) {
+          case CANVAS:
+            renderer.context.lineWidth = 0.5;
+            renderer.context.beginPath();
+            renderer.context.arc(lx, ly, 10, 0, Math.PIM2);
+            renderer.context.strokeStyle = light.ambientHex;
+            renderer.context.stroke();
+            renderer.context.beginPath();
+            renderer.context.arc(lx, ly, 4, 0, Math.PIM2);
+            renderer.context.fillStyle = light.diffuseHex;
+            renderer.context.fill();
+            break;
+          case SVG:
+            lx += renderer.halfWidth;
+            ly = renderer.halfHeight - ly;
+            light.core.setAttributeNS(null, 'fill', light.diffuseHex);
+            light.core.setAttributeNS(null, 'cx', lx);
+            light.core.setAttributeNS(null, 'cy', ly);
+            renderer.element.appendChild(light.core);
+            light.ring.setAttributeNS(null, 'stroke', light.ambientHex);
+            light.ring.setAttributeNS(null, 'cx', lx);
+            light.ring.setAttributeNS(null, 'cy', ly);
+            renderer.element.appendChild(light.ring);
+            break;
+        }
+      }
+    }
+  }
+
+  function addEventListeners() {
+    window.addEventListener('resize', onWindowResize);
+    container.addEventListener('click', onMouseClick);
+    container.addEventListener('mousemove', onMouseMove);
+  }
+
+  function addControls() {
+    var i, l, light, folder, controller;
+
+    // Create GUI
+    gui = new dat.GUI({autoPlace:false});
+    controls.appendChild(gui.domElement);
+
+    // Create folders
+    uiFolder = gui.addFolder('UI');
+    renderFolder = gui.addFolder('Render');
+    meshFolder = gui.addFolder('Mesh');
+    lightFolder = gui.addFolder('Light');
+    exportFolder = gui.addFolder('Export');
+
+    // Open folders
+    uiFolder.open();
+    renderFolder.open();
+    // meshFolder.open();
+    lightFolder.open();
+    // exportFolder.open();
+
+    // Add UI Controls
+    controller = uiFolder.add(UI, 'show');
+    controller.onChange(function(value) {
+      ui.className = value ? 'wrapper' : 'wrapper hide';
+    });
+
+    // Add Render Controls
+    controller = renderFolder.add(RENDER, 'renderer', {webgl:WEBGL, canvas:CANVAS, svg:SVG});
+    controller.onChange(function(value) {
+      setRenderer(value);
+    });
+
+    // Add Mesh Controls
+    controller = meshFolder.addColor(MESH, 'ambient');
+    controller.onChange(function(value) {
+      for (i = 0, l = scene.meshes.length; i < l; i++) {
+        scene.meshes[i].material.ambient.set(value);
+      }
+    });
+    controller = meshFolder.addColor(MESH, 'diffuse');
+    controller.onChange(function(value) {
+      for (i = 0, l = scene.meshes.length; i < l; i++) {
+        scene.meshes[i].material.diffuse.set(value);
+      }
+    });
+    controller = meshFolder.add(MESH, 'width', 0.05, 2);
+    controller.onChange(function(value) {
+      if (geometry.width !== value * renderer.width) { createMesh(); }
+    });
+    controller = meshFolder.add(MESH, 'height', 0.05, 2);
+    controller.onChange(function(value) {
+      if (geometry.height !== value * renderer.height) { createMesh(); }
+    });
+    controller = meshFolder.add(MESH, 'depth', 0, 50);
+    controller = meshFolder.add(MESH, 'segments', 1, 20);
+    controller.step(1);
+    controller.onChange(function(value) {
+      if (geometry.segments !== value) { createMesh(); }
+    });
+    controller = meshFolder.add(MESH, 'slices', 1, 20);
+    controller.step(1);
+    controller.onChange(function(value) {
+      if (geometry.slices !== value) { createMesh(); }
+    });
+    controller = meshFolder.add(MESH, 'xRange', 0, 1);
+    controller = meshFolder.add(MESH, 'yRange', 0, 1);
+    controller = meshFolder.add(MESH, 'speed', 0, 0.01);
+
+    // Add Light Controls
+    autopilotController = lightFolder.add(LIGHT, 'autopilot');
+    controller = lightFolder.addColor(LIGHT, 'ambient');
+    controller.onChange(function(value) {
+      for (i = 0, l = scene.lights.length; i < l; i++) {
+        light = scene.lights[i];
+        light.ambient.set(value);
+        light.ambientHex = light.ambient.format();
+      }
+    });
+    controller = lightFolder.addColor(LIGHT, 'diffuse');
+    controller.onChange(function(value) {
+      for (i = 0, l = scene.lights.length; i < l; i++) {
+        light = scene.lights[i];
+        light.diffuse.set(value);
+        light.diffuseHex = light.diffuse.format();
+      }
+    });
+    controller = lightFolder.add(LIGHT, 'count', 0, 5);
+    controller.step(1);
+    controller.onChange(function(value) {
+      if (scene.lights.length !== value) { createLights(); }
+    });
+    controller = lightFolder.add(LIGHT, 'zOffset', 0, 500);
+    controller.step(1);
+
+    // Add Export Controls
+    controller = exportFolder.add(EXPORT, 'width', 100, 4000);
+    controller.step(100);
+    controller = exportFolder.add(EXPORT, 'height', 100, 4000);
+    controller.step(100);
+    controller = exportFolder.add(EXPORT, 'drawLights');
+    controller = exportFolder.add(EXPORT, 'minLightX', 0, 1);
+    controller = exportFolder.add(EXPORT, 'maxLightX', 0, 1);
+    controller = exportFolder.add(EXPORT, 'minLightY', 0, 1);
+    controller = exportFolder.add(EXPORT, 'maxLightY', 0, 1);
+    controller = exportFolder.add(EXPORT, 'export');
+  }
+
+  //------------------------------
+  // Callbacks
+  //------------------------------
+  function onMouseClick(event) {
+    FSS.Vector3.set(attractor, event.x, renderer.height - event.y);
+    FSS.Vector3.subtract(attractor, center);
+    LIGHT.autopilot = !LIGHT.autopilot;
+    autopilotController.updateDisplay();
+  }
+
+  function onMouseMove(event) {
+    FSS.Vector3.set(attractor, event.x, renderer.height - event.y);
+    FSS.Vector3.subtract(attractor, center);
+  }
+
+  function onWindowResize(event) {
+    resize(container.offsetWidth, container.offsetHeight);
+    render();
+  }
+
+
+
+  // Let there be light!
+  initialise();
+
+})();
+    </script>
+
+
   </body>
 </html>
